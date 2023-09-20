@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Описание проекта">
   <title>Masa</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/manrope-300.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/manrope-400.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/manrope-500.woff2" as="font" crossorigin="anonymous">
 </head>
 <body>
 <div class="wrapper">
@@ -32,7 +35,7 @@
               </li>
               <li class="nav__item" data-accordion="parent">
                 <div class="nav__element" data-accordion="element">
-                  <button class="nav__link" data-accordion="button">
+                  <button class="nav__link" data-accordion="button" type="button">
                     Программы
                     <svg width="12" height="12">
                       <use xlink:href="img/sprite.svg#nav-arrow"></use>
@@ -64,7 +67,7 @@
               </li>
               <li class="nav__item" data-accordion="parent">
                 <div class="nav__element" data-accordion="element">
-                  <button class="nav__link" data-accordion="button">
+                  <button class="nav__link" data-accordion="button" type="button">
                     Новости
                     <svg width="12" height="12">
                       <use xlink:href="img/sprite.svg#nav-arrow"></use>
@@ -157,7 +160,7 @@
                 <source media="(max-width: 1199px)"
                   srcset="img/hero-bg-2-tablet.jpg 1x, img/hero-bg-2-tablet@2x.jpg 2x">
                 <img src="img/hero-bg-2-desktop.jpg" srcset="img/hero-bg-2-desktop@2x.jpg 2x"
-                  alt="Три сосредоточенных человека">
+                  alt="Дружная компания друзей">
               </picture>
             </div>
             <div class="hero__text">
@@ -192,7 +195,7 @@
                 <source media="(max-width: 1199px)"
                   srcset="img/hero-bg-3-tablet.jpg 1x, img/hero-bg-3-tablet@2x.jpg 2x">
                 <img src="img/hero-bg-3-desktop.jpg" srcset="img/hero-bg-3-desktop@2x.jpg 2x"
-                  alt="Три сосредоточенных человека">
+                  alt="Молодая студентка в очках">
               </picture>
             </div>
             <div class="hero__text">
@@ -342,7 +345,7 @@
                   <source media="(max-width: 1199px)"
                     srcset="img/programs-2-tablet.jpg 1x, img/programs-2-tablet@2x.jpg 2x">
                   <img src="img/programs-2-desktop.jpg" srcset="img/programs-2-desktop@2x.jpg 2x"
-                    alt="Два сконцентрированных человека">
+                    alt="Молодой парень в синей футболке">
                 </picture>
               </div>
               <div class="programs__text">
@@ -370,7 +373,7 @@
                   <source media="(max-width: 1199px)"
                     srcset="img/programs-3-tablet.jpg 1x, img/programs-3-tablet@2x.jpg 2x">
                   <img src="img/programs-3-desktop.jpg" srcset="img/programs-3-desktop@2x.jpg 2x"
-                    alt="Два сконцентрированных человека">
+                    alt="Человек в очках среди кучи книг">
                 </picture>
               </div>
               <div class="programs__text">
@@ -417,12 +420,12 @@
         </div>
         <div class="programs__scrollbar"></div>
         <div class="programs__nav">
-          <button class="programs-slide-prev slider-arrow">
+          <button class="programs-slide-prev slider-arrow" type="button">
             <svg width="10" height="10">
               <use xlink:href="img/sprite.svg#slider-arrow"></use>
             </svg>
           </button>
-          <button class="programs-slide-next slider-arrow">
+          <button class="programs-slide-next slider-arrow" type="button">
             <svg width="10" height="10">
               <use xlink:href="img/sprite.svg#slider-arrow"></use>
             </svg>
@@ -532,7 +535,7 @@
                   <source type="image/webp" srcset="img/news-3-desktop.webp 1x, img/news-3-desktop@2x.webp 2x">
                   <source media="(max-width: 1199px)" srcset="img/news-4-tablet.jpg 1x, img/news-4-tablet@2x.jpg 2x">
                   <img src="img/news-3-desktop.jpg" srcset="img/news-3-desktop@2x.jpg 2x"
-                    alt="Вид на пляж Израиля">
+                    alt="Беспорядок на столе">
                 </picture>
               </div>
               <div class="news__text">
@@ -556,7 +559,7 @@
                   <source type="image/webp" srcset="img/news-4-desktop.webp 1x, img/news-4-desktop@2x.webp 2x">
                   <source media="(max-width: 1199px)" srcset="img/news-3-tablet.jpg 1x, img/news-3-tablet@2x.jpg 2x">
                   <img src="img/news-4-desktop.jpg" srcset="img/news-4-desktop@2x.jpg 2x"
-                    alt="Вид на пляж Израиля">
+                    alt="Значок волонтерства на футболке">
                 </picture>
               </div>
               <div class="news__text">
@@ -604,7 +607,7 @@
                   <source type="image/webp" srcset="img/news-3-desktop.webp 1x, img/news-3-desktop@2x.webp 2x">
                   <source media="(max-width: 1199px)" srcset="img/news-4-tablet.jpg 1x, img/news-4-tablet@2x.jpg 2x">
                   <img src="img/news-3-desktop.jpg" srcset="img/news-3-desktop@2x.jpg 2x"
-                    alt="Вид на пляж Израиля">
+                    alt="Значок волонтерства на футболке">
                 </picture>
               </div>
               <div class="news__text">
@@ -628,7 +631,7 @@
                   <source type="image/webp" srcset="img/news-4-desktop.webp 1x, img/news-4-desktop@2x.webp 2x">
                   <source media="(max-width: 1199px)" srcset="img/news-3-tablet.jpg 1x, img/news-3-tablet@2x.jpg 2x">
                   <img src="img/news-4-desktop.jpg" srcset="img/news-4-desktop@2x.jpg 2x"
-                    alt="Вид на пляж Израиля">
+                    alt="Значок волонтерства на футболке">
                 </picture>
               </div>
               <div class="news__text">
@@ -666,49 +669,48 @@
         <h2>Вопросы и ответы</h2>
         <div class="faq__accordion" data-accordion="parent">
           <div class="faq__element" data-accordion="element">
-            <button class="faq__header" data-accordion="button">
+            <button class="faq__header" data-accordion="button" type="button">
               <span>Кто организатор? Какие сроки у программы?</span>
-              <span class="faq__button" aria-label="Открыть"></span>
+              <span class="faq__button"></span>
             </button>
-            <p data-accordion="content">Полная стоимость определяется организаторами в зависимости от направления. В
-              большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается
-              определённая доля личного участия.</p>
+            <p data-accordion="content">Организатором программы является проект “Маса” в сотрудничестве с
+              образовательными учреждениями. Сроки программы обмена могут варьироваться от одного семестра до года.</p>
           </div>
           <div class="faq__element" data-accordion="element">
-            <button class="faq__header" data-accordion="button">
+            <button class="faq__header" data-accordion="button" type="button">
               <span>Что такое грант на обучение?</span>
-              <span class="faq__button" aria-label="Открыть"></span>
+              <span class="faq__button"></span>
             </button>
-            <p data-accordion="content">Полная стоимость определяется организаторами в зависимости от направления. В
-              большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается
-              определённая доля личного участия.</p>
+            <p data-accordion="content">Грант на обучение - это финансовая поддержка, которую предоставляет организатор
+              программы обмена студентами для оплаты учебных расходов.</p>
           </div>
           <div class="faq__element" data-accordion="element">
-            <button class="faq__header" data-accordion="button">
+            <button class="faq__header" data-accordion="button" type="button">
               <span>Как определяется стоимость программы?</span>
-              <span class="faq__button" aria-label="Открыть"></span>
+              <span class="faq__button"></span>
             </button>
             <p data-accordion="content">Полная стоимость определяется организаторами в зависимости от направления. В
               большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается
               определённая доля личного участия.</p>
           </div>
           <div class="faq__element" data-accordion="element">
-            <button class="faq__header" data-accordion="button">
+            <button class="faq__header" data-accordion="button" type="button">
               <span>Признаётся ли учеба в рамках проекта для дальнейшего обучения?</span>
-              <span class="faq__button" aria-label="Открыть"></span>
+              <span class="faq__button"></span>
             </button>
-            <p data-accordion="content">Полная стоимость определяется организаторами в зависимости от направления. В
-              большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается
-              определённая доля личного участия.</p>
+            <p data-accordion="content">Студенты, участвующие в проекте, могут использовать полученные знания и навыки в
+              своей будущей профессиональной деятельности или продолжить обучение в высших учебных заведениях. Кроме
+              того, многие университеты и колледжи предоставляют кредиты за участие в программе обмена студентами.</p>
           </div>
           <div class="faq__element" data-accordion="element">
-            <button class="faq__header" data-accordion="button">
+            <button class="faq__header" data-accordion="button" type="button">
               <span>Как выглядит полный процесс регистрации на программу «Маса»?</span>
-              <span class="faq__button" aria-label="Открыть"></span>
+              <span class="faq__button"></span>
             </button>
-            <p data-accordion="content">Полная стоимость определяется организаторами в зависимости от направления. В
-              большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается
-              определённая доля личного участия.</p>
+            <p data-accordion="content">Процесс регистрации на программу обмена включает выбор университета-партнера и
+              программы обмена, общение с координатором программы, заполнение заявления и предоставление необходимых
+              документов, прохождение интервью, оформление визы, жилья и страховки, обучение по безопасности за границей
+              и подписание договора об участии в программе. Подробнее можно узнать позвонив в центр.</p>
           </div>
         </div>
       </div>
@@ -723,7 +725,7 @@
                 <div class="reviews__name">
                   <div class="reviews__image">
                     <picture>
-                      <source type="image/webp" srcset="img/review.webp 1x, img/review@2x.webp">
+                      <source type="image/webp" srcset="img/review.webp 1x, img/review@2x.webp 2x">
                       <img src="img/review.png" srcset="img/review@2x.png 2x" alt="Сара Аврахам">
                     </picture>
                   </div>
@@ -752,7 +754,7 @@
                 <div class="reviews__name">
                   <div class="reviews__image">
                     <picture>
-                      <source type="image/webp" srcset="img/review.webp 1x, img/review@2x.webp">
+                      <source type="image/webp" srcset="img/review.webp 1x, img/review@2x.webp 2x">
                       <img src="img/review.png" srcset="img/review@2x.png 2x" alt="Давид Иммервар">
                     </picture>
                   </div>
@@ -781,7 +783,7 @@
                 <div class="reviews__name">
                   <div class="reviews__image">
                     <picture>
-                      <source type="image/webp" srcset="img/review.webp 1x, img/review@2x.webp">
+                      <source type="image/webp" srcset="img/review.webp 1x, img/review@2x.webp 2x">
                       <img src="img/review.png" srcset="img/review@2x.png 2x" alt="Сара Аврахам">
                     </picture>
                   </div>
@@ -851,7 +853,8 @@
               <source type="image/webp" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
               <source media="(max-width: 767px)" srcset="img/map-mobile.png 1x, img/map-mobile@2x.png 2x">
               <source media="(max-width: 1199px)" srcset="img/map-tablet.png 1x, img/map-tablet@2x.png 2x">
-              <img src="img/map-desktop.png" srcset="img/map-desktop@2x.png" alt="Карта">
+              <img src="img/map-desktop.png" srcset="img/map-desktop@2x.png"
+                alt="г. Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»">
             </picture>
           </div>
         </div>
@@ -863,7 +866,7 @@
           <div class="consult__text">
             <h2>Напишите нам</h2>
             <p>Оставьте ваши контакты, если у вас остались вопросы – мы на них ответим!</p>
-            <div class="consult__form" data-form-validate>
+            <div class="consult__form" data-form-validate data-callback="base">
               <form method="post">
                 <div class="consult__input custom-input" data-validate-type="text" data-limitation="name" data-required>
                   <label>
@@ -874,18 +877,18 @@
                 <div class="consult__input custom-input" data-validate-type="phone" data-required>
                   <label>
                     <span>Телефон</span>
-                    <input type="tel" name="name">
+                    <input type="tel" name=tel>
                   </label>
                 </div>
                 <div class="consult__textarea custom-textarea" data-validate-type="text" data-required>
                   <label>
                     <span>Ваше сообщение</span>
-                    <textarea type="tel" name="name"></textarea>
+                    <textarea name="message"></textarea>
                   </label>
                 </div>
                 <div class="consult__select custom-select" data-select data-id="town-select" data-name="town"
                   data-validate-type="select" data-required>
-                  <label>Ваш город</label>
+                  <label>Выберите город</label>
                   <button class="custom-select__button" type="button" aria-label="Выберите одну из опций">
                     <span class="custom-select__text"></span>
                     <span class="custom-select__icon">
@@ -1003,7 +1006,7 @@
       </button>
       <h2>Напишите нам</h2>
       <p>Оставьте ваши контакты, если у вас остались вопросы – мы на них ответим!</p>
-      <div class="modal__form" data-form-validate>
+      <div class="modal__form" data-form-validate data-callback="base">
         <form method="post">
           <div class="modal__input custom-input" data-validate-type="text" data-limitation="name" data-required>
             <label class="modal__label">
@@ -1019,7 +1022,7 @@
           </div>
           <div class="modal__select custom-select" data-select data-id="town-select" data-name="town"
             data-validate-type="select" data-required>
-            <label>Ваш город</label>
+            <label>Выберите город</label>
             <button class="custom-select__button" type="button" aria-label="Выберите одну из опций">
               <span class="custom-select__text"></span>
               <span class="custom-select__icon">
@@ -1058,20 +1061,6 @@
     </div>
   </div>
 </div>
-
-<!--    <div class="modal modal&#45;&#45;preload modal&#45;&#45;fit-content modal&#45;&#45;no-scale" data-modal="success">-->
-<!--      <div class="modal__wrapper">-->
-<!--        <div class="modal__overlay" data-close-modal></div>-->
-<!--        <div class="modal__content">-->
-<!--          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>-->
-<!--          <button class="modal__close-btn.scss btn.scss-reset" type="button" aria-label="Закрыть попап" data-close-modal>-->
-<!--            <svg width="15" height="15">-->
-<!--              <use xlink:href="img/sprite.svg#icon-close"></use>-->
-<!--            </svg>-->
-<!--          </button>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
 
 <script src="js/vendor.min.js"></script>
 <script src="js/main.min.js"></script>
