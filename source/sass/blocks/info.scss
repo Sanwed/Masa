@@ -1,0 +1,173 @@
+.info {
+  background: $color-cerulean-blue;
+  color: $color-alabaster;
+}
+
+.info__wrapper {
+  display: flex;
+  gap: 138px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 120px 100px 108px;
+
+  @include vp-1199 {
+    padding: 100px 45px;
+    display: block;
+  }
+
+  @include vp-767 {
+    padding: 67px 15px;
+  }
+}
+
+.info__inner-wrapper {
+  flex-basis: 498px;
+
+  h2 {
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 50px;
+    margin: 0 0 33px;
+  }
+
+  h3 {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 36px;
+    margin: 0 0 43px;
+    padding: 10px 0;
+  }
+
+  p {
+    margin: 0 0 32px;
+  }
+
+  @include vp-1199 {
+    margin: 0 0 35px;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 34px;
+      line-height: 50px;
+      margin: 0 0 28px;
+    }
+
+    h3 {
+      font-size: 28px;
+      line-height: 28px;
+      margin: 0 0 32px;
+    }
+
+    p {
+      line-height: 20px;
+      margin: 0 160px 35px 0;
+    }
+  }
+
+  @include vp-767 {
+    margin: 0 0 25px;
+
+    h2 {
+      font-size: 20px;
+      line-height: 20px;
+      margin: 0 0 14px;
+    }
+
+    h3 {
+      font-size: 18px;
+      line-height: 22px;
+      margin: 0 0 15px;
+    }
+
+    p {
+      margin: 0 0 24px;
+      font-size: 14px;
+    }
+  }
+}
+
+.info__image {
+  border-radius: 16px;
+  width: 498px;
+  height: 363px;
+  overflow: hidden;
+
+  @include vp-1199 {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.info__list {
+  padding: 0 0 0 20px;
+  margin: 0;
+  list-style: none;
+
+  @include vp-1199 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px 48px;
+  }
+
+  @include vp-767 {
+    padding: 0 0 0 15px;
+    display: block;
+  }
+}
+
+.info__item {
+  padding: 22px 25px;
+  position: relative;
+  counter-increment: info-counter;
+  border-radius: 16px;
+  border: 1px solid $color-alabaster;
+  margin-bottom: 23px;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  &::before {
+    @include center;
+
+    content: counter(info-counter);
+    position: absolute;
+    top: -16px;
+    left: -21px;
+    width: 42px;
+    height: 42px;
+    background: $color-cerulean-blue;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0.22px;
+  }
+
+  @include vp-1199 {
+    line-height: 20px;
+    margin: 0;
+    padding: 25px;
+  }
+
+  @include vp-767 {
+    padding: 18px 25px;
+    font-size: 14px;
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    &::before {
+      font-size: 18px;
+      line-height: 18px;
+      width: 32px;
+      height: 32px;
+      top: -6px;
+      left: -16px;
+    }
+  }
+}

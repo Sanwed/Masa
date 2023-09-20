@@ -1,0 +1,54 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.28px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  user-select: none;
+
+  &--light {
+    border: 1px solid $color-cerulean-blue;
+    background: transparent;
+    color: $color-cerulean-blue;
+
+    @include light-button-states;
+
+    & .btn__icon {
+      background: $color-cerulean-blue;
+    }
+  }
+
+  &--dark {
+    border: 1px solid $color-default-white;
+    background: transparent;
+    color: $color-default-white;
+
+    @include dark-button-states;
+
+    & .btn__icon {
+      background: $color-default-white;
+    }
+  }
+
+  &__icon {
+    transition: all 0.5s ease;
+    width: 46px;
+    height: 46px;
+    position: relative;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  svg {
+    transition: all 0.5s ease;
+    position: absolute;
+    top: calc(50% - 5px);
+    left: calc(50% - 5px);
+  }
+}

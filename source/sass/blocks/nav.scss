@@ -1,0 +1,222 @@
+.nav {
+  position: absolute;
+  top: 30px;
+  right: 100px;
+  z-index: 3;
+
+  @include vp-1199 {
+    right: 45px;
+  }
+
+  @include vp-767 {
+    top: 20px;
+    right: 15px;
+  }
+}
+
+.nav__wrapper {
+  position: relative;
+  max-width: 134px;
+
+  &.is-active {
+    min-width: 290px;
+  }
+
+  @include vp-767 {
+    &.is-active {
+      min-width: calc(100vw - 30px);
+    }
+  }
+}
+
+.nav__button {
+  gap: 20px;
+  padding: 4px 4px 4px 20px;
+  margin-bottom: 4px;
+  background: $color-default-white;
+
+  @include hover-focus {
+    & .btn__icon {
+      &::before {
+        background: $color-cerulean-blue;
+        box-shadow: 0 4px 0 0 $color-cerulean-blue, 0 -4px 0 0 $color-cerulean-blue;
+      }
+    }
+  }
+
+  &:active {
+    & .btn__icon {
+      &::before {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &:disabled {
+    & .btn__icon {
+      &::before {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &.is-active {
+    width: 100%;
+    background: $color-cerulean-blue;
+    color: $color-default-white;
+
+    @include dark-button-states;
+
+    @include hover-focus {
+      & .btn__icon {
+        &::before,
+        &::after {
+          background: $color-default-white;
+        }
+      }
+    }
+
+    &:active {
+      & .btn__icon {
+        &::before,
+        &::after {
+          opacity: 0.7;
+        }
+      }
+    }
+
+    &:disabled {
+      & .btn__icon {
+        &::before,
+        &::after {
+          opacity: 0.6;
+        }
+      }
+    }
+
+    & .btn__icon {
+      background: $color-default-white;
+
+      &::before {
+        box-shadow: none;
+        background: $color-cerulean-blue;
+        rotate: 45deg;
+        left: calc(50% - 12px);
+        width: 24px;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: calc(50% - 12px);
+        width: 24px;
+        height: 1px;
+        background: $color-cerulean-blue;
+        rotate: -45deg;
+      }
+    }
+  }
+
+  & .btn__icon {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: calc(50% - 9px);
+      width: 18px;
+      height: 1px;
+      background: $color-default-white;
+      box-shadow: 0 4px 0 0 $color-default-white, 0 -4px 0 0 $color-default-white;
+    }
+  }
+}
+
+.nav__list {
+  list-style: none;
+  padding: 35px 25px;
+  margin: 0;
+  border-radius: 16px;
+  background: $color-cerulean-blue;
+  min-height: max-content;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.32px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+}
+
+.nav__item {
+  margin-bottom: 28px;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.nav__link {
+  color: #c0d2ec;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0;
+  text-transform: uppercase;
+
+  svg {
+    transition: transform 0.2s ease;
+    transform: scaleY(-1);
+    stroke: #c0d2ec;
+  }
+
+  @include hover-focus {
+    color: $color-default-white;
+
+    svg {
+      stroke: $color-default-white;
+    }
+  }
+
+  &:active {
+    color: #c0d2ec;
+
+    svg {
+      stroke: #c0d2ec;
+    }
+  }
+
+  &--current {
+    pointer-events: none;
+    color: $color-default-white;
+  }
+}
+
+.nav__element.is-active button.nav__link {
+  color: $color-default-white;
+}
+
+.nav__element.is-active svg {
+  transform: scale(1);
+  stroke: $color-default-white;
+}
+
+.nav__sublist {
+  list-style: none;
+  padding: 0 0 0 16px;
+  margin: 20px 0 0;
+  text-transform: none;
+}
+
+.nav__subitem {
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.nav__subitem .nav__link {
+  text-transform: none;
+}

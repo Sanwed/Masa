@@ -1,0 +1,169 @@
+@mixin retina() {
+  @media (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+@mixin webp($image) {
+  @supports (background: url($image)) {
+    background-image: url($image);
+  }
+}
+
+@mixin hover-focus {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+    @content;
+  }
+}
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin light-button-states {
+  @include hover-focus {
+    background: $color-cerulean-blue;
+    color: $color-default-white;
+
+    & .btn__icon {
+      background-color: $color-default-white;
+    }
+  }
+
+  &:active {
+    color: #c0d2ec;
+  }
+
+  &:disabled,
+  &--disabled {
+    pointer-events: none;
+    border: 1px solid $color-mischka;
+    color: $color-mischka;
+
+    & .btn__icon {
+      color: $color-mischka;
+    }
+  }
+}
+
+@mixin dark-button-states {
+  @include hover-focus {
+    background: $color-default-white;
+    color: $color-cerulean-blue;
+
+    & .btn__icon {
+      background-color: $color-cerulean-blue;
+    }
+  }
+
+  &:active {
+    color: rgba(49, 109, 194, 0.7);
+  }
+
+  &:disabled,
+  &--disabled {
+    pointer-events: none;
+    border: 1px solid $color-mischka;
+    color: $color-mischka;
+
+    & .btn__icon {
+      color: $color-mischka;
+    }
+  }
+}
+
+@mixin slider-arrow-states {
+  @include hover-focus {
+    background: $color-default-white;
+  }
+
+  &:active {
+    svg {
+      opacity: 0.7;
+    }
+  }
+
+  &:disabled {
+    background: transparent;
+
+    svg {
+      stroke: $color-mischka;
+    }
+  }
+}
+
+@mixin angle($size) {
+  position: absolute;
+  content: "";
+  width: $size;
+  height: $size;
+  background-image: url("../img/svg/angle.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+// Desktop first
+
+@mixin vp-1199 {
+  @media (max-width: $vp-1200 - 1px) {
+    @content;
+  }
+}
+
+@mixin vp-767 {
+  @media (max-width: ($vp-768 - 1px)) {
+    @content;
+  }
+}
+
+// Mobile first
+
+// @mixin vp-375 {
+//   @media (min-width: $vp-375) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-768 {
+//   @media (min-width: $vp-768) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-1024 {
+//   @media (min-width: $vp-1024) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-1280 {
+//   @media (min-width: $vp-1280) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-1440 {
+//   @media (min-width: $vp-1440) {
+//     @content;
+//   }
+// }
+
+// @mixin vp-1920 {
+//   @media (min-width: $vp-1920) {
+//     @content;
+//   }
+// }
+
+// ---------------------------------
+
+// не нужно добавлять свои миксины для ресета списков, обнуления кнопок и прочие
+// этим вы усложняете работу команды, проверку вашего кода и будущую поддержку проекта

@@ -1,0 +1,32 @@
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  @include vp-1199 {
+    justify-content: flex-end;
+    gap: 15px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+
+.footer-nav__link {
+  @include hover-focus {
+    color: $color-cerulean-blue;
+  }
+
+  &:active {
+    color: $color-endeavour;
+  }
+}

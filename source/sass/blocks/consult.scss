@@ -1,0 +1,263 @@
+.consult {
+  background: $color-alabaster;
+}
+
+.consult__wrapper {
+  padding: 120px 100px 60px;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @include vp-1199 {
+    padding: 100px 45px 60px;
+  }
+
+  @include vp-767 {
+    padding: 67px 15px 30px;
+  }
+}
+
+.consult__inner-wrapper {
+  display: flex;
+  border-radius: 16px;
+}
+
+.consult__text {
+  position: relative;
+  z-index: 1;
+  border-radius: 16px;
+  padding: 70px 74px 60px;
+  background: $color-cerulean-blue;
+  color: $color-alabaster;
+  min-width: 498px;
+
+  h2 {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 36px;
+    margin: 0 0 20px;
+    color: $color-default-white;
+  }
+
+  p {
+    margin: 0 0 30px;
+    opacity: 0.9;
+  }
+
+  @include vp-1199 {
+    min-width: 442px;
+    padding: 50px 45px;
+
+    h2 {
+      font-size: 28px;
+      line-height: 28px;
+    }
+
+    p {
+      line-height: 20px;
+    }
+  }
+
+  @include vp-767 {
+    min-width: 100%;
+    padding: 50px 15px;
+
+    h2 {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+.consult__image {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  left: -498px;
+  flex-shrink: 0;
+  width: 100%;
+
+  @include vp-1199 {
+    left: -442px;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.consult__input,
+.consult__textarea {
+  label {
+    input,
+    textarea {
+      color: $color-default-white;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+
+      @media (hover: hover) {
+        &:hover {
+          border-color: $color-default-white;
+        }
+      }
+
+      &:focus {
+        border-color: $color-default-white;
+      }
+
+      &:disabled {
+        border: 1px solid #ffffff;
+        opacity: 0.4;
+        background: rgba(255, 255, 255, 0.2);
+      }
+    }
+  }
+
+  @include hover-focus {
+    input,
+    textarea {
+      border-color: $color-default-white;
+    }
+  }
+}
+
+.consult__select {
+  .custom-select__button {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    &:hover {
+      border: 1px solid $color-default-white;
+    }
+
+    &:focus {
+      border: 1px solid $color-default-white;
+    }
+
+    &:disabled {
+      pointer-events: none;
+      opacity: 0.3;
+    }
+  }
+
+  .custom-select__text {
+    color: $color-default-white;
+  }
+
+  .custom-select__list {
+    border: 1px solid $color-default-white;
+    color: $color-charcoal;
+  }
+
+  .custom-select__icon {
+    svg {
+      stroke: $color-default-white;
+    }
+  }
+}
+
+.consult__toggle {
+  input {
+    &:focus-visible {
+      & + .custom-toggle__icon {
+        border-color: $color-default-white;
+      }
+    }
+
+    &:disabled {
+      & + .custom-toggle__icon {
+        border-color: $color-default-white;
+        background: rgba(255, 255, 255, 0.6);
+      }
+    }
+
+    &:checked {
+      &:disabled {
+        & + .custom-toggle__icon {
+          background: $color-mischka;
+        }
+
+        & + .custom-toggle__icon svg {
+          opacity: 0.7;
+        }
+      }
+
+      & + .custom-toggle__icon {
+        background: $color-default-white;
+      }
+
+      & + .custom-toggle__icon svg {
+        stroke: $color-cerulean-blue;
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          & + .custom-toggle__icon {
+            background: transparent;
+
+            svg {
+              stroke: $color-default-white;
+            }
+          }
+        }
+      }
+
+      &:focus-visible {
+        & + .custom-toggle__icon {
+          background: transparent;
+        }
+
+        & + .custom-toggle__icon svg {
+          stroke: $color-default-white;
+        }
+      }
+    }
+  }
+
+  .custom-toggle__icon {
+    border: 1px solid rgba(255, 255, 255, 0.7);
+
+    svg {
+      stroke: $color-cerulean-blue;
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      .custom-toggle__icon {
+        border-color: $color-default-white;
+      }
+    }
+  }
+}
+
+.consult__button {
+  width: 100%;
+  padding: 4px 4px 4px 30px;
+  gap: 30px;
+
+  svg {
+    stroke: $color-cerulean-blue;
+  }
+
+  @include hover-focus {
+    .btn__icon {
+      rotate: 45deg;
+    }
+
+    svg {
+      stroke: $color-default-white;
+    }
+  }
+
+  @include vp-1199 {
+    text-align: center;
+
+    span:first-child {
+      flex-grow: 1;
+      text-align: center;
+    }
+  }
+}

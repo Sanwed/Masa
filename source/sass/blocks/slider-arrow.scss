@@ -1,0 +1,15 @@
+.slider-arrow {
+  @include center;
+  @include slider-arrow-states;
+
+  padding: 6px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  transition: all 0.2s linear;
+
+  &:last-of-type {
+    rotate: 180deg;
+  }
+}

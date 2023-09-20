@@ -1,0 +1,272 @@
+.hero__slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__slide {
+  position: relative;
+  padding: 448px 100px 60px;
+  min-height: 800px;
+  width: 100%;
+  flex-shrink: 0;
+  visibility: hidden;
+
+  &--visible {
+    visibility: visible;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $color-cerulean-blue-transparent;
+    z-index: 1;
+  }
+
+  @include vp-1199 {
+    padding: 714px 45px 60px;
+  }
+
+  @include vp-767 {
+    min-height: 568px;
+    padding: 260px 15px 20px;
+  }
+}
+
+.hero__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  img {
+    object-fit: cover;
+  }
+}
+
+.hero__text {
+  position: relative;
+  z-index: 1;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  h2 {
+    background: $color-default-white;
+    padding: 40px 50px 30px;
+    font-size: 54px;
+    font-weight: 400;
+    line-height: 62px;
+    color: $color-cerulean-blue;
+    margin: 0;
+    max-width: 968px;
+    border-radius: 0 30px 30px 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  @include vp-1199 {
+    h2 {
+      font-size: 36px;
+      line-height: 44px;
+      padding: 30px 40px 24px;
+      max-width: 660px;
+    }
+
+    p {
+      line-height: 20px;
+    }
+  }
+
+  @include vp-767 {
+    h2 {
+      font-size: 22px;
+      border-radius: 0 16px 16px 0;
+      line-height: 26px;
+      padding: 20px 14px 16px;
+    }
+
+    p {
+      position: relative;
+      padding: 0 14px 12px;
+      background: $color-default-white;
+      border-radius: 0 0 14px 0;
+      font-size: 14px;
+
+      &::before {
+        top: 5px;
+        right: -10px;
+
+        @include angle(10px);
+        transform: scaleY(-1);
+      }
+    }
+  }
+}
+
+.hero__text-wrapper {
+  position: relative;
+  display: flex;
+  gap: 30px;
+  padding: 0 50px 26px;
+  margin-top: -6px;
+  border-radius: 0 0 30px 30px;
+  background: $color-default-white;
+  max-width: 772px;
+  align-items: center;
+
+  &::before {
+    @include angle(26px);
+
+    transform: scaleY(-1);
+    right: -26px;
+    top: 6px;
+  }
+
+  @include vp-1199 {
+    max-width: 590px;
+    padding: 0 40px 35px;
+    align-items: flex-start;
+  }
+
+  @include vp-767 {
+    display: block;
+    background: transparent;
+    max-width: 260px;
+    padding: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.hero__slider .hero__pagination {
+  position: relative;
+  top: 0;
+  width: max-content;
+  display: flex;
+  gap: 12px;
+  padding: 14px 20px;
+  background: $color-default-white;
+  height: max-content;
+  border-radius: 20px 20px 0 0;
+
+  &::before {
+    @include angle(20px);
+
+    right: -20px;
+    bottom: 0;
+  }
+
+  @include vp-767 {
+    padding: 10px 16px;
+    border-radius: 12px 12px 0 0;
+
+    &::before {
+      width: 10px;
+      height: 10px;
+      right: -10px;
+    }
+  }
+}
+
+.hero__pagination-wrapper {
+  position: absolute;
+  top: 410px;
+  left: 100px;
+  right: 100px;
+  z-index: 2;
+
+  @include vp-1199 {
+    top: 677px;
+    left: 45px;
+    right: 45px;
+  }
+
+  @include vp-767 {
+    top: 232px;
+    left: 15px;
+    right: 15px;
+  }
+}
+
+.hero__pagination-block {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.hero__button-wrapper {
+  @include vp-767 {
+    position: relative;
+    width: max-content;
+    border-radius: 0 0 14px 14px;
+    padding: 6px 15px;
+    background: $color-default-white;
+
+    &::before {
+      @include angle(10px);
+      right: -10px;
+      top: 0;
+      transform: scaleY(-1);
+    }
+  }
+}
+
+.hero__bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid $color-cerulean-blue;
+  background: $color-default-white;
+  cursor: pointer;
+
+  &--active {
+    background: $color-cerulean-blue;
+    pointer-events: none;
+  }
+
+  @include vp-767 {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+.hero__button {
+  padding: 4px 4px 4px 30px;
+  gap: 30px;
+
+  svg {
+    stroke: $color-default-white;
+  }
+
+  @include hover-focus {
+    svg {
+      rotate: 45deg;
+      stroke: $color-cerulean-blue;
+    }
+  }
+
+  @include vp-1199 {
+    margin-top: 5px;
+  }
+
+  @include vp-767 {
+    max-width: 152px;
+    font-size: 12px;
+    line-height: 12px;
+    gap: 20px;
+    padding: 4px 4px 4px 20px;
+    letter-spacing: 0.24px;
+
+    & .btn__icon {
+      width: 34px;
+      height: 34px;
+    }
+  }
+}

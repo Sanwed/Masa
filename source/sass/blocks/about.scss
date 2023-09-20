@@ -1,0 +1,259 @@
+.about {
+  background: $color-alabaster;
+}
+
+.about__wrapper {
+  padding: 120px 100px 60px;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @include vp-1199 {
+    padding: 100px 45px 50px;
+  }
+
+  @include vp-767 {
+    padding: 67px 15px 35px;
+  }
+}
+
+.about__inner-wrapper {
+  display: flex;
+  gap: 160px;
+  margin-bottom: 60px;
+
+  h2 {
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 50px;
+    color: $color-cerulean-blue;
+    margin: 0 0 33px;
+  }
+
+  p {
+    font-size: 22px;
+    line-height: 32px;
+    margin: 0;
+  }
+
+  @include vp-1199 {
+    display: block;
+    margin-right: 150px;
+
+    h2 {
+      font-size: 34px;
+      line-height: 50px;
+      margin: 0 0 24px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+
+  @include vp-767 {
+    max-width: 100%;
+    margin-bottom: 40px;
+    margin-right: 0;
+
+    h2 {
+      font-size: 20px;
+      line-height: 20px;
+      margin: 0 0 15px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+}
+
+.about__header {
+  flex-basis: 477px;
+
+  @include vp-1199 {
+    margin-bottom: 28px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 30px;
+  }
+}
+
+.about__text {
+  flex-basis: 498px;
+
+  h3 {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 36px;
+    margin: 0 0 30px;
+    color: $color-cerulean-blue;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 26px;
+    margin: 0 0 33px;
+    flex-shrink: 0;
+  }
+
+  @include vp-1199 {
+    h3 {
+      font-size: 28px;
+      line-height: 28px;
+      margin: 0 0 23px;
+    }
+
+    p {
+      line-height: 20px;
+      margin: 0 0 35px;
+    }
+  }
+
+  @include vp-767 {
+    h3 {
+      font-size: 18px;
+      line-height: 22px;
+      margin: 0 0 10px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 20px;
+      margin: 0 0 25px;
+    }
+  }
+}
+
+.about__button {
+  width: max-content;
+  gap: 30px;
+  padding: 4px 4px 4px 30px;
+  max-width: 498px;
+
+  svg {
+    stroke: $color-default-white;
+  }
+
+  @include hover-focus {
+    svg {
+      rotate: 45deg;
+      stroke: $color-cerulean-blue;
+    }
+  }
+
+  @include vp-767 {
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.24px;
+    gap: 20px;
+    padding: 4px 4px 4px 20px;
+
+    & .btn__icon {
+      width: 34px;
+      height: 34px;
+    }
+  }
+}
+
+.about__list {
+  list-style: none;
+  padding: 90px 106px 54px 126px;
+  margin: 0;
+  background: $color-cerulean-blue;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 478px));
+  gap: 53px;
+  border-radius: 20px;
+  color: $color-default-white;
+
+  @include vp-1199 {
+    padding: 61px 41px 41px 60px;
+    gap: 43px 53px;
+  }
+
+  @include vp-767 {
+    display: block;
+    padding: 41px 20px 41px 31px;
+  }
+}
+
+.about__item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 30px 60px;
+  border-radius: 16px;
+  border: 1px solid $color-alabaster;
+
+  h3 {
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.26px;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  p {
+    color: $color-alabaster;
+    margin: 0;
+    font-weight: 300;
+    line-height: 20px;
+  }
+
+  @include vp-1199 {
+    padding: 30px 30px 23px;
+    display: block;
+
+    h3 {
+      font-size: 20px;
+      line-height: 22px;
+      letter-spacing: 0.2px;
+      margin: 0 0 8px;
+      max-width: 132px;
+    }
+  }
+
+  @include vp-767 {
+    padding: 20px 15px 21px 19px;
+    margin-bottom: 23px;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    h3 {
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.16px;
+      max-width: 100%;
+      margin: 0 0 4px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
+
+.about__icon {
+  @include center;
+
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  padding: 10px;
+  background: $color-cerulean-blue;
+  top: -22px;
+  left: -22px;
+}

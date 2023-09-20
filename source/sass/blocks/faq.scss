@@ -1,0 +1,261 @@
+.faq {
+  background: $color-alabaster;
+}
+
+.faq__wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 60px 206px;
+
+  h2 {
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 50px;
+    color: $color-cerulean-blue;
+    margin: 0 0 70px;
+    text-align: center;
+  }
+
+  @include vp-1199 {
+    padding: 48px 45px;
+
+    h2 {
+      font-size: 34px;
+      line-height: 50px;
+      margin: 0 0 40px;
+    }
+  }
+
+  @include vp-767 {
+    padding: 35px 15px;
+
+    h2 {
+      font-size: 20px;
+      line-height: 20px;
+      margin: 0 0 32px;
+    }
+  }
+}
+
+.faq__accordion {
+  max-width: 100%;
+}
+
+.faq__element {
+  overflow: hidden;
+  margin-bottom: 10px;
+  border-radius: 16px;
+  border: 1px solid $color-cerulean-blue;
+  transition: all 0.1s ease;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  span {
+    text-align: left;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 27px;
+    color: $color-cerulean-blue;
+    margin: 0;
+    max-width: 700px;
+  }
+
+  p {
+    margin: 0;
+    max-width: 650px;
+    padding: 0 0 0 40px;
+  }
+
+  &.is-active {
+    background: $color-cerulean-blue;
+    padding: 0 0 32px;
+
+    span {
+      color: $color-default-white;
+    }
+
+    p {
+      color: $color-alabaster;
+    }
+
+    .faq__button {
+      background: $color-default-white;
+
+      &::before {
+        background: $color-cerulean-blue;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+
+    .faq__header {
+      padding: 40px 40px 14px;
+
+      @include hover-focus {
+        .faq__button {
+          background: transparent;
+          border-color: $color-default-white;
+
+          &::before {
+            background: $color-default-white;
+          }
+        }
+      }
+
+      &:active {
+        background: $color-endeavour;
+
+        span {
+          color: $color-default-white;
+        }
+
+        .faq__button {
+          background: $color-default-white;
+        }
+
+        .faq__button::before {
+          background: $color-endeavour;
+        }
+      }
+    }
+  }
+
+  @include vp-1199 {
+    span {
+      font-size: 22px;
+      line-height: 26px;
+    }
+
+    p {
+      padding: 0 0 0 30px;
+      line-height: 20px;
+      max-width: 550px;
+    }
+
+    &.is-active {
+      padding: 0 0 26px;
+
+      .faq__header {
+        padding: 29px 30px 14px;
+      }
+    }
+  }
+
+  @include vp-767 {
+    span {
+      font-size: 16px;
+      line-height: 18px;
+      max-width: 190px;
+    }
+
+    p {
+      font-size: 14px;
+      padding: 0 15px 0;
+    }
+
+    &.is-active {
+      padding: 0 0 14px;
+
+      .faq__header {
+        padding: 20px 15px 14px;
+      }
+    }
+  }
+}
+
+.faq__element:has(.faq__header:hover):not(.is-active),
+.faq__element:has(.faq__header:focus-visible):not(.is-active) {
+  background: $color-default-white;
+}
+
+.faq__element:has(.faq__header:active) {
+  span {
+    color: $color-endeavour;
+  }
+}
+
+.faq__element.is-active:has(.faq__header:active) {
+  background: $color-endeavour;
+}
+
+.faq__header {
+  padding: 40px 40px 38px;
+  width: 100%;
+  border: none;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+
+  @include hover-focus {
+    .faq__button {
+      border-color: $color-cerulean-blue;
+      background: transparent;
+
+      &::before,
+      &::after {
+        background: $color-cerulean-blue;
+      }
+    }
+  }
+
+  &:active {
+    .faq__button {
+      border-color: $color-endeavour;
+      background: $color-endeavour;
+
+      &::before,
+      &::after {
+        background: $color-default-white;
+      }
+    }
+  }
+
+  &:disabled {
+    pointer-events: none;
+
+    .faq__button {
+      background: $color-mischka;
+    }
+  }
+
+  @include vp-1199 {
+    padding: 30px 30px 25px;
+    align-items: center;
+  }
+
+  @include vp-767 {
+    padding: 20px 15px 18px;
+  }
+}
+
+.faq__button {
+  position: relative;
+  border-radius: 30px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid transparent;
+  background: $color-cerulean-blue;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 1px;
+    top: 50%;
+    left: calc(50% - 9px);
+    background: $color-default-white;
+  }
+
+  &::after {
+    rotate: 90deg;
+  }
+}

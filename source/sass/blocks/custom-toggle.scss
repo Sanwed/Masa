@@ -1,0 +1,110 @@
+.custom-toggle {
+  position: relative;
+  font-size: 12px;
+  line-height: 12px;
+  display: flex;
+  width: 100%;
+  margin-bottom: 30px;
+
+  input {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+
+    clip: rect(0 0 0 0);
+
+    &:focus-visible + .custom-toggle__icon {
+      border-color: $color-cerulean-blue;
+    }
+
+    &:disabled + .custom-toggle__icon {
+      border-color: $color-cerulean-blue;
+      background: rgba(49, 109, 194, 0.6);
+
+      svg {
+        display: none;
+      }
+    }
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    position: relative;
+
+    cursor: pointer;
+
+    span {
+      margin-bottom: 0;
+      margin-left: 0;
+    }
+  }
+
+  &--checkbox {
+    @media (hover: hover) {
+      &:hover {
+        .custom-toggle__icon {
+          border-color: $color-cerulean-blue;
+        }
+      }
+    }
+
+    .custom-toggle__icon {
+      @include center;
+
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      border-radius: 2px;
+      border: 1px solid rgba(49, 109, 194, 0.7);
+
+      transition: background-color 0.3s ease;
+
+      svg {
+        stroke: $color-default-white;
+      }
+    }
+  }
+
+  input:checked + .custom-toggle__icon {
+    background: $color-cerulean-blue;
+  }
+
+  &.is-invalid {
+    label span {
+      color: #ff1553;
+    }
+
+    .custom-toggle__icon {
+      border: 1px solid $color-wild-watermelon;
+      opacity: 0.7;
+      background: rgba(255, 94, 102, 0.2);
+
+      svg {
+        display: none;
+      }
+    }
+  }
+
+  &.is-valid {
+    @include hover-focus {
+      .custom-toggle__icon {
+        background: transparent;
+
+        svg {
+          stroke: $color-cerulean-blue;
+        }
+      }
+    }
+
+    input:disabled + .custom-toggle__icon {
+      .custom-toggle__icon {
+        background: $color-mischka;
+      }
+    }
+  }
+}
