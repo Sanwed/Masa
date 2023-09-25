@@ -11,6 +11,15 @@
   flex-shrink: 0;
   visibility: hidden;
 
+  &--internship,
+  &--volunteering {
+    padding: 457px 100px 60px;
+
+    .hero__text-wrapper {
+      padding: 5px 50px 34px;
+    }
+  }
+
   &--visible {
     visibility: visible;
   }
@@ -28,11 +37,69 @@
 
   @include vp-1199 {
     padding: 714px 45px 60px;
+
+    &--internship,
+    &--volunteering {
+      padding: 733px 45px 60px;
+
+      .hero__text-wrapper {
+        padding: 5px 40px 30px;
+      }
+
+      .hero__button {
+        margin: 0;
+      }
+    }
   }
 
   @include vp-767 {
     min-height: 568px;
     padding: 260px 15px 20px;
+
+    &--internship,
+    &--volunteering {
+      padding: 286px 15px 20px;
+
+      .hero__text-wrapper {
+        padding: 5px 0 0;
+
+        p {
+          padding: 0 14px 7px;
+        }
+
+        p::before {
+          top: 0;
+        }
+      }
+
+      .hero__button-wrapper {
+        padding: 10px 15px 6px;
+      }
+    }
+  }
+}
+
+.hero__slider:has(.hero__slide--internship.hero__slide--visible) .hero__pagination-wrapper {
+  top: 419px;
+
+  @include vp-1199 {
+    top: 695px;
+  }
+
+  @include vp-767 {
+    top: 259px;
+  }
+}
+
+.hero__slider:has(.hero__slide--volunteering.hero__slide--visible) .hero__pagination-wrapper {
+  top: 419px;
+
+  @include vp-1199 {
+    top: 695px;
+  }
+
+  @include vp-767 {
+    top: 259px;
   }
 }
 
@@ -112,7 +179,7 @@
 .hero__text-wrapper {
   position: relative;
   display: flex;
-  gap: 30px;
+  gap: 27px;
   padding: 0 50px 26px;
   margin-top: -6px;
   border-radius: 0 0 30px 30px;
@@ -225,6 +292,10 @@
   border: 1px solid $color-cerulean-blue;
   background: $color-default-white;
   cursor: pointer;
+
+  @include hover-focus {
+
+  }
 
   &--active {
     background: $color-cerulean-blue;

@@ -8,7 +8,7 @@
 
   @include vp-1199 {
     justify-content: flex-end;
-    gap: 14px;
+    gap: 16px;
     font-size: 16px;
     line-height: 20px;
   }
@@ -17,7 +17,21 @@
     font-size: 14px;
     gap: 10px;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    max-width: 290px;
+    margin: 0 auto;
+  }
+}
+
+.footer-nav__item{
+  @include vp-767 {
+    &:nth-child(4n) {
+      margin-left: 30px;
+    }
+
+    &:nth-child(6n) {
+      margin-right: 30px;
+    }
   }
 }
 

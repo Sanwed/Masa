@@ -9,6 +9,10 @@
   background: transparent;
   transition: all 0.2s linear;
 
+  svg {
+    stroke: $color-cerulean-blue;
+  }
+
   &:last-of-type {
     rotate: 180deg;
   }

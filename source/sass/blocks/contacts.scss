@@ -89,6 +89,17 @@
     line-height: 26px;
   }
 
+  a {
+    @include hover-focus {
+      border-bottom: 1px solid $color-default-white;
+    }
+
+    &:active {
+      border: none;
+      opacity: 0.8;
+    }
+  }
+
   @include vp-1199 {
     p,
     a {
@@ -97,7 +108,7 @@
   }
 
   @include vp-767 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 
     &:last-child {
       margin: 0;
@@ -119,6 +130,7 @@
   width: 100%;
   height: 500px;
   border-radius: 16px;
+  overflow: hidden;
 
   @include vp-767 {
     height: 240px;

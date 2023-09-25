@@ -22,7 +22,7 @@
   }
 
   @include vp-1199 {
-    gap: 37px 0;
+    gap: 39px 0;
     grid-template-columns: repeat(7, 1fr);
     padding: 50px 45px 100px;
 
@@ -33,6 +33,7 @@
   }
 
   @include vp-767 {
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px 0;
     padding: 34px 15px 67px;
 
@@ -49,6 +50,7 @@
   width: max-content;
   justify-self: right;
   grid-column: -1 / -3;
+  max-width: 250px;
 
   svg {
     stroke: $color-default-white;
@@ -63,7 +65,8 @@
 
   @include vp-767 {
     grid-row: 3 / 4;
-    grid-column: 1 / 3;
+    grid-column: 1 / -1;
+    margin-right: auto;
     font-size: 12px;
     line-height: 12px;
     letter-spacing: 0.24px;
@@ -107,9 +110,7 @@
 }
 
 .programs__image {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100%;
   height: 100%;
 
@@ -119,9 +120,11 @@
 }
 
 .programs__text {
-  position: relative;
+  position: absolute;
   z-index: 1;
   padding: 280px 51px 20px 20px;
+  bottom: 0;
+  left: 0;
 
   h3 {
     margin: 0;

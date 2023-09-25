@@ -19,6 +19,11 @@
 .consult__inner-wrapper {
   display: flex;
   border-radius: 16px;
+
+  @include vp-1199 {
+    max-width: 678px;
+    margin: 0 auto;
+  }
 }
 
 .consult__text {
@@ -45,7 +50,7 @@
 
   @include vp-1199 {
     min-width: 442px;
-    padding: 60px 45px;
+    padding: 60px 45px 55px;
 
     h2 {
       font-size: 28px;
@@ -84,6 +89,7 @@
   width: 100%;
 
   @include vp-1199 {
+    width: unset;
     left: -442px;
   }
 
@@ -119,9 +125,14 @@
     }
 
     @include vp-767 {
+      input {
+        min-height: 50px;
+      }
+
       span {
         font-size: 12px;
         line-height: 20px;
+        margin-bottom: 10px;
       }
     }
   }
@@ -132,6 +143,10 @@
       border-color: $color-default-white;
     }
   }
+}
+
+.consult__textarea {
+  margin-bottom: 10px;
 }
 
 .consult__select {
@@ -150,6 +165,14 @@
       pointer-events: none;
       opacity: 0.3;
     }
+
+    @include vp-767 {
+      min-height: 50px;
+    }
+  }
+
+  label {
+    margin-bottom: 12px;
   }
 
   .custom-select__text {
@@ -167,8 +190,14 @@
     }
   }
 
+  @include vp-1199 {
+    label {
+      margin-bottom: 7px;
+    }
+  }
+
   @include vp-767 {
-    margin: 0 0 27px;
+    margin: 0 0 24px;
 
     label {
       font-size: 12px;
@@ -178,6 +207,8 @@
 }
 
 .consult__toggle {
+  margin-bottom: 40px;
+
   input {
     &:focus-visible {
       & + .custom-toggle__icon {

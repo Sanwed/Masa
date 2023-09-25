@@ -148,11 +148,15 @@
   @include vp-767 {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
-    gap: 18px;
+    gap: 13px;
 
     span,
     a {
       margin: 0 auto;
+    }
+
+    a {
+      padding-bottom: 3px;
     }
   }
 }

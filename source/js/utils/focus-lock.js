@@ -9,7 +9,7 @@ const SELECTORS = [
   'object',
   'embed',
   '[contenteditable]',
-  '[tabindex]:not([tabindex^="-"])'
+  '[tabindex]:not([tabindex^="-"])',
 ];
 
 export class FocusLock {
@@ -65,7 +65,10 @@ export class FocusLock {
       this._endElement.blur();
     }
     if (startElement && startFocus) {
-      startElement.focus();
+      setTimeout(() => {
+        startElement.focus();
+      }, 500);
+
     }
     document.addEventListener('keydown', this._documentKeydownHandler);
   }

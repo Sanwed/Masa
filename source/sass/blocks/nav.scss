@@ -19,7 +19,7 @@
   max-width: 134px;
 
   &.is-active {
-    min-width: 290px;
+    min-width: 286px;
   }
 
   @include vp-767 {
@@ -134,7 +134,7 @@
 
 .nav__list {
   list-style: none;
-  padding: 35px 25px;
+  padding: 30px 25px;
   margin: 0;
   border-radius: 16px;
   background: $color-cerulean-blue;
@@ -147,7 +147,7 @@
 }
 
 .nav__item {
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 
   &:last-child {
     margin: 0;
@@ -157,7 +157,7 @@
 .nav__link {
   color: #c0d2ec;
   display: flex;
-  gap: 10px;
+  gap: 14px;
   align-items: center;
   cursor: pointer;
   background: transparent;
@@ -205,12 +205,12 @@
 .nav__sublist {
   list-style: none;
   padding: 0 0 0 16px;
-  margin: 20px 0 0;
+  margin: 15px 0 0;
   text-transform: none;
 }
 
 .nav__subitem {
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 
   &:last-child {
     margin: 0;
