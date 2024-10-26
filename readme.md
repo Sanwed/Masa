@@ -1,17 +1,18 @@
-## Краткая инструкция по работе
-Для начала работы у вас должент быть установлен **Node.js**
+# Masa
+landing page created as pet-project to show technical knowledge.
 
-### Основные команды для работы
-- Установка - `npm i`
-- Запуск локального сервера без минификаций - `npm start`
-- Запуск локального сервера c минификациями, <br>
-данный вариант не используется в разработке, <br>
-он нужен только для тестов производительности <br>
-на локальном хосте  - `npm run dev`
-- Сборка проекта, минификация скриптов <br>
-и оптимизация изображений перед деплоем на прод - `npm run build`
-- Запуск тестирования на соответствия кодгайдам - `npm test`
-- Создание webp изображений в директории source - `npm run webp`
+## How to install
+Clone repository and run ```npm install```
 
-### Вся разработка ведётся в директории `source`
-### Итоговый код попадает в директорию `build`
+## Functionality
+- CSS animations
+- Autoslider "banner". It can be changed by pressing the navigation buttons.
+- The "Programs" slider. It contains the scroll bar and arrows navigation.
+- The "News" tab element. It can be sorted by clicking the corresponding buttons at the top. Each tab is a slider and can be controlled by arrows or page navigation.
+- The "FAQ" section. It can be expanded by clicking the corresponding button or the entire heading.
+- The interactive maps using leaflet library.
+- The form validation with custom select input.
+
+## Screenshots
+![image](https://github.com/user-attachments/assets/5b284058-dfad-4d34-8317-1c528dcb872e)
+
