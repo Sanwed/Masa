@@ -6,12 +6,25 @@ const navBtn = document.querySelector('[data-nav="button"]');
 const nav = document.querySelector('[data-nav="nav"]');
 const navItems = nav.querySelectorAll('[data-nav="link"]');
 
+let isNavOpened = false;
+
+const getScrollbarWidth = () => window.innerWidth - document.documentElement.clientWidth;
+
 const toggleNav = () => {
+  if (!isNavOpened) {
+    const scrollbarWidth = getScrollbarWidth();
+    body.style.paddingRight = `${scrollbarWidth}px`;
+  } else {
+    body.style.paddingRight = '';
+  }
+
   body.classList.toggle('overflow');
   navBtn.classList.toggle('is-active');
   overlays.forEach((el) => {
     el.classList.toggle('is-opened');
   });
+
+  isNavOpened = !isNavOpened;
 };
 
 const closeNav = () => {
