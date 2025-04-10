@@ -1,18 +1,32 @@
-# Masa
-landing page created as pet-project to show technical knowledge.
+# Личный проект "Masa"
 
-## How to install
-Clone repository and run ```npm install```
+Лендиноговая страница проекта "Masa", созданная во время прохождения акселератора HTML Academy
 
-## Functionality
-- CSS animations
-- Autoslider "banner". It can be changed by pressing the navigation buttons.
-- The "Programs" slider. It contains the scroll bar and arrows navigation.
-- The "News" tab element. It can be sorted by clicking the corresponding buttons at the top. Each tab is a slider and can be controlled by arrows or page navigation.
-- The "FAQ" section. It can be expanded by clicking the corresponding button or the entire heading.
-- The interactive maps using leaflet library.
-- The form validation with custom select input.
+## Как запустить
+1. Клонировать репозиторий ``https://github.com/Sanwed/Masa.git``
+2. Установить зависимости ``npm install``. Используемая версия Node.js – ``16.20.2``
+3. Для запуска проекта в dev-режиме – ``npm start``
+4. Для сборки проекта – ``npm run build``
 
-## Screenshots
-![image](https://github.com/user-attachments/assets/5b284058-dfad-4d34-8317-1c528dcb872e)
+## Особенности и функционал
+- Полностью адаптивный сайт под 3 разрешения: Компьютерное, Планшетное и Мобильное
+- Оптимизированные и сжатые изображения, использующие lazy-loading, также добавлена конвертация в современные форматы webp и avif
+- Разные вариации слайдеров
+– Табы для блока новостей
+– Компонент аккордеона
+– Форма с валидацие и маской для номера
+– Встроенное API карты с кастомными метками
 
+## Используемые технологии
+1. HTML с использованием методологии BEM
+2. SASS
+3. JavaScript, ES6
+4. Gulp для сборки
+5. Stylelint и EditorConfig
+
+## Скриншоты
+<img width="1457" alt="Screenshot 2025-04-10 at 11 12 14" src="https://github.com/user-attachments/assets/e4b20000-080c-4ed4-9809-7fe4364e7021" />
+<img width="1457" alt="Screenshot 2025-04-10 at 11 14 58" src="https://github.com/user-attachments/assets/21a86a4d-f5be-4103-abcf-4d3425e7e7ff" />
+<img width="304" alt="Screenshot 2025-04-10 at 11 15 33" src="https://github.com/user-attachments/assets/8dfc2d7b-0650-43a1-9032-20e3f85f7c95" />
+<img width="304" alt="Screenshot 2025-04-10 at 11 15 46" src="https://github.com/user-attachments/assets/e449d299-c672-4f10-b85f-b704ff616efe" />
+<img width="304" alt="Screenshot 2025-04-10 at 11 16 24" src="https://github.com/user-attachments/assets/249fc2e4-ada9-4a73-8414-e0c6da672e8a" />
